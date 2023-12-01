@@ -1,0 +1,18 @@
+package sot3;
+import static org.junit.Assert.assertEquals;
+import java.util.Scanner;
+
+public class saveethaTest {
+    public static void main(String[] args) {
+        String str;
+        Scanner a = new Scanner(System.in);
+        System.out.print("Enter a string : ");
+        str = a.nextLine();
+        System.out.println("Reverse of a String '" + str + "' is :");
+        StringBuilder reversedStr = new StringBuilder();
+        for (int j = str.length(); j > 0; --j) {
+            reversedStr.append(str.charAt(j - 1));
+        }
+        System.out.println(reversedStr.toString());
+    }
+}
