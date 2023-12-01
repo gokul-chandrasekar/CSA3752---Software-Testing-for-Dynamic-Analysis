@@ -1,0 +1,24 @@
+package sot5;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class linkedin {
+	public static void main(String[] args) {
+		System.out.println("hai");
+		System.setProperty("webdriver.gecko.driver ","C:\\CSA37 Lab details\\Sellinium and junit\\selenium jar\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("https://in.linkedin.com/");
+		WebElement username=driver.findElement(By.id("email"));
+		System.out.println(username);
+		WebElement password=driver.findElement(By.id("password"));
+		System.out.println(password);
+		WebElement login=driver.findElement(By.name("btnlogin"));
+		System.out.println(login);
+		username.sendKeys("varun345!gmail.com");
+		password.sendKeys("123456112");
+		login.click();
+	}
+}
