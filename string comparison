@@ -1,0 +1,24 @@
+package strcompare;
+import java.util.Scanner;
+public class strcompare{
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the first user name:");
+        String str1 = in.nextLine();
+        System.out.println("Enter the second user name:");
+        String str2 = in.nextLine();
+        if (isValidString(str1) && isValidString(str2)) {
+            if (str1.equals(str2)) {
+                System.out.println("The user names are valid.");
+            } else {
+                System.out.println("The user names invalid.");
+            }
+        } else {
+            System.out.println("Invalid input: Please enter valid user names.");
+        }
+        in.close();
+    }
+    private static boolean isValidString(String str) {
+        return str != null && !str.trim().isEmpty();
+    }
+}
